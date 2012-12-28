@@ -1,5 +1,8 @@
 # django mongodbforms
 
+Note: This is a fork by Kenneth Falck <kennu@iki.fi> (https://github.com/kennu).
+This fork fixes some Django incompatibilities.
+
 This is an implementation of django's model forms for mongoengine documents.
 
 ## Requirements

@@ -101,7 +101,8 @@ def save_instance(form, instance, fields=None, fail_message='saved',
             new_fields = dict([(n, f) for n, f in fields.iteritems() if not n in form._delete_before_save])
             if hasattr(instance, '_changed_fields'):
                 for field in form._delete_before_save:
-                    instance._changed_fields.remove(field)
+                    if field in instance._changed_fields:
+                        instance._changed_fields.remove(field)
             instance._fields = new_fields
             instance.save()
             instance._fields = fields
