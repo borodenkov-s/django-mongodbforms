@@ -15,7 +15,7 @@ from django.utils.text import capfirst
 
 from mongoengine.fields import ObjectIdField, ListField, ReferenceField, FileField, ImageField
 try: from mongoengine.errors import ValidationError
-except: from mognoengine.base import ValidationError
+except: from mongoengine.base import ValidationError
 from mongoengine.connection import _get_db
 
 from fieldgenerator import MongoDefaultFormFieldGenerator
